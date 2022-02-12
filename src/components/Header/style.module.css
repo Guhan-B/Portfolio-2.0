@@ -1,0 +1,118 @@
+.header {
+  background-color: transparent;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: 0.2s all ease-in-out;
+}
+
+.header .header_left .logo {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.header .header_right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.header .header_right .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  text-transform: uppercase;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: var(--color-black);
+  transition: 0.4s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  clip-path: circle(0% at 100% 0);
+}
+
+.header .header_right .links.active {
+  clip-path: circle(150% at 100% 0);
+}
+
+.header .header_right .links a {
+  font-size: 2rem;
+  color: var(--color-white);
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
+  transition-delay: 0.5s;
+  position: relative;
+  opacity: 0;
+}
+
+.header .header_right .links.active a {
+  opacity: 1;
+}
+
+.header .header_right .links.active a {
+  transition-delay: 0;
+}
+
+.header .header_right .links a::after{
+  content: "";
+  width: 0%;
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  height: 4px;
+  background-color: var(--color-white);
+  transition: 0.2s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  opacity: 0.8;
+}
+
+.header .header_right .links a:hover::after {
+  width: 120%;
+}
+
+.burger {
+  display: flex;
+  outline: none;
+  height: 30px;
+  width: 30px;
+  border: 0px;
+  padding: 0px;
+  background: transparent;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  background: var(--color-white);
+  transition: all 0.2s ease-out;
+  will-change: transform;
+}
+
+.burger span:nth-of-type(1) {
+  transform: translateY(-5px);
+}
+
+.burger span:nth-of-type(2){
+  transform: translateY(5px);
+}
+
+.active.burger span:nth-of-type(1) {
+  transform: translateY(0px) rotate(45deg);
+}
+
+.active.burger span:nth-of-type(2) {
+  transform: translateY(0px) rotate(-45deg);
+}

@@ -1,0 +1,21 @@
+.wrapper {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem 1rem;
+}
+
+.wrapper blockquote {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-grey-dark);
+}
+
+.wrapper span {
+  font-style: italic;
+  color: var(--color-grey-light);
+}
