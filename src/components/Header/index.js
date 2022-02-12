@@ -14,26 +14,12 @@ const Header = () => {
     menuClasses.push(styles.active);
   }
 
-  React.useEffect(() => {
-    const header = document.querySelector("#header");
-
-    window.addEventListener("scroll", (e) => {
-      if (window.scrollY >= 20) {
-        header.style.background = "var(--color-black)";
-        header.style.padding = "0.75rem 2rem";
-      } else {
-        header.style.background = "transparent";
-        header.style.padding = "1rem 2rem";
-      }
-    });
-  }, []);
-
   const toggleMenu = () => {
     setIsOpen((state) => !state);
   };
 
   return (
-    <div id="header" className={styles.header}>
+    <div className={styles.header}>
       <div className={styles.header_left}>
         <img className={styles.logo} src={Logo} alt="Logo" />
       </div>

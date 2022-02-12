@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 2.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 2rem;
+    border-bottom: 10px solid var(--color-grey-dark);
+}
+
+.footer .social {
+    display: flex;
+    gap: 2rem
+}
+
+.footer .social a {
+    opacity: 0.8;
+    transition: 0.2s all ease-in-out;
+}
+
+.footer .social a:hover{
+    opacity: 1;
+}
+
+.footer .social a img {
+    width: 20px;
+}
+
+.footer p.comment {
+    font-size: 0.85rem;
+    font-family: 'Roboto Mono', monospace;
+    width: 70%;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.footer .link_version {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .link_version a {
+    color: var(--color-white);
+    font-size: 1rem;
+    text-decoration: underline;
+    font-family: 'Roboto Mono', monospace;
+    opacity: 0.8;
+}
+
+.footer .link_version p {
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+}
+

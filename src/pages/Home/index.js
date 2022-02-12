@@ -6,6 +6,7 @@ import QuoteSection from "../../components/QuoteSection";
 import AboutSection from "../../components/AboutSection";
 import SkillSection from "../../components/SkillSection";
 import ContactSection from "../../components/ContactSection";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   return (
@@ -18,11 +19,12 @@ const Home = () => {
       />
       <AboutSection />
       <QuoteSection
-        quote="Life is ten percent what happens to you and ninety percent how you respond to it."
-        author="Charles Swindoll"
+        quote="Do not go where the path may lead, go instead where there is no path and leave a trail."
+        author="Ralph Waldo Emerson"
       />
       <SkillSection />
       <ContactSection />
+      <Footer/>
     </React.Fragment>
   );
 };
