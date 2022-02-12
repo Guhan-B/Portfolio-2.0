@@ -1,5 +1,4 @@
 import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
 
 import styles from "./style.module.css";
 import Logo from "../../assets/Logo.svg";
@@ -33,13 +32,6 @@ const Header = () => {
     setIsOpen((state) => !state);
   };
 
-  const links = [
-    { name: "Home", href: "" },
-    { name: "About", href: "" },
-    { name: "Showcase", href: "" },
-    { name: "Resume", href: "" },
-  ];
-
   return (
     <div id="header" className={styles.header}>
       <div className={styles.header_left}>
@@ -47,10 +39,10 @@ const Header = () => {
       </div>
       <div className={styles.header_right}>
         <div className={menuClasses.join(" ")}>
-          <a>Home</a>
-          <a>About</a>
-          <a>Showcase</a>
-          <a>Resume</a>
+          <a onClick={toggleMenu} href="#home">Home</a>
+          <a onClick={toggleMenu} href="#about">About</a>
+          <a onClick={toggleMenu} href="#showcase">Showcase</a>
+          <a onClick={toggleMenu} href="#resume">Resume</a>
         </div>
         <div className={burgerClasses.join(" ")} onClick={toggleMenu}>
           <span></span>

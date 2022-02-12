@@ -7,8 +7,6 @@ import AboutSection from "../../components/AboutSection";
 import SkillSection from "../../components/SkillSection";
 import ContactSection from "../../components/ContactSection";
 
-import styles from "./style.module.css";
-
 const Home = () => {
   return (
     <React.Fragment>

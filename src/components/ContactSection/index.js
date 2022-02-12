@@ -20,7 +20,7 @@ const ContactSection = () => {
   const [showAlert, setShowAlert] = React.useState(false);
   const [alertDetails, setAlertDetails] = React.useState({});
 
-  const validateEmail = value => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value);
+  const validateEmail = value => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/.test(value);
 
   const submit = (e) => {
     e.preventDefault();
@@ -128,7 +128,7 @@ const ContactSection = () => {
           />
           <button className={styles.submit_button}>
             <span>Send Message</span>
-            <img src={Arrow} />
+            <img src={Arrow} alt="arrow"/>
           </button>
         </form>
       </div>
@@ -170,7 +170,7 @@ const Alert = (props) => {
   return (
     <div className={styles.alert + " " + styles[props.alert.type]}>
       <span>{props.alert.message}</span>
-      <img src={props.alert.icon}/>
+      <img src={props.alert.icon} alt="error icon"/>
     </div>
   );
 }

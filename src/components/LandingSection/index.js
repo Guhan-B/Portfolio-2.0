@@ -36,7 +36,12 @@ const LandingSection = () => {
       </div>
       <div className={styles.side_social}>
         {
-          socials.map(social => <a target="_blank" key={social.id} href={social.url}><img src={social.icon}/></a>)
+          socials.map(
+            social => 
+            <a rel="noreferrer" target="_blank" key={social.id} href={social.url}>
+              <img src={social.icon} alt={social.name}/>
+            </a>
+          )
         }
         <span className={styles.line}></span>
       </div>

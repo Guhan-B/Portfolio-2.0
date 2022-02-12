@@ -11,7 +11,7 @@ const AboutSection = () => {
       <div className={styles.left_section}>
         <h1>
           <span>Hola People</span>
-          <img src={Wave} />
+          <img src={Wave} alt="wave"/>
         </h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec
@@ -29,7 +29,7 @@ const AboutSection = () => {
         </p>
       </div>
       <div className={styles.right_section}>
-        <img src={Placeholder} />
+        <img src={Placeholder} alt="me"/>
       </div>
     </div>
   );

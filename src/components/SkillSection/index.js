@@ -37,7 +37,7 @@ const ToolListItem = ({ tool }) => {
         <div key={tool.id} className={styles.tool_list_item}>
             <p>{ tool.name }</p>
             <span>
-                { tool.icons.map((icon, i) => <img key={i} src={icon}/>) }
+                { tool.icons.map((icon, i) => <img key={i} src={icon} alt={tool.name}/>) }
             </span>
         </div>
     );
