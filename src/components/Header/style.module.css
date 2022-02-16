@@ -140,4 +140,7 @@
   .header {
     padding: 1rem 1.25rem;
   }
+  .burger {
+    right: 1.5rem;
+  }
 }
