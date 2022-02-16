@@ -1,0 +1,26 @@
+.audio_button {
+    background-color: var(--color-white);
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 10;
+    box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.5);
+    /* mix-blend-mode: difference; */
+    cursor: pointer;
+    transition: 0.2s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.audio_button img {
+    display: block;
+}
+
+.audio_button:hover {
+    transform: scale(0.8);
+}

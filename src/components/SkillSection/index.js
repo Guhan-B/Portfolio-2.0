@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import styles from "./styles.module.css";
 
@@ -26,7 +27,11 @@ const SkillListItem = ({ skill }) => {
     <div key={skill.id} className={styles.skill_list_item}>
       <p>{skill.name}</p>
       <span className={styles.line}>
-        <span style={{ width: `${skill.percent}%` }}></span>
+        <motion.span 
+          initial={{width: 0}} 
+          whileInView={{width: `${skill.percent}%`, transition: {duration: 0.5, delay: 0.5}}}
+          viewport={{once: true}}
+        />
       </span>
     </div>
   );

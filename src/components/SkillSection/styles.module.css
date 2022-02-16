@@ -2,7 +2,7 @@
   background-color: var(--color-black);
   color: var(--color-white);
   text-transform: uppercase;
-  padding: 4rem 4rem 4rem 4rem;
+  padding: 4rem;
   clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
 }
 
@@ -15,6 +15,10 @@
 
 .skill_list .skill_list_item {
     margin-bottom: 2rem;
+}
+
+.skill_list .skill_list_item:last-of-type {
+  margin-bottom: 0;
 }
 
 .skill_list .skill_list_item p {
@@ -43,6 +47,10 @@
     gap: 1rem;
 }
 
+.tool_list .tool_list_item:last-of-type {
+  margin-bottom: 0;
+}
+
 .tool_list .tool_list_item p {
   font-size: 1rem;
 }
@@ -59,4 +67,41 @@
 
 .tool_list .tool_list_item:nth-of-type(2) span img:nth-of-type(4) {
     height: 20px;
+}
+
+@media only screen and (max-width: 950px) {
+  .wrapper h1 {
+    margin-bottom: 2rem;
+  }
+  .list_grid {
+    padding: 0;
+    gap: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .wrapper {
+    clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
+    
+  }
+
+  .list_grid {
+    grid-template-columns: 1fr;
+    gap: 4rem 0;
+  }
+
+  .tool_list .tool_list_item {
+    align-items: flex-start;
+  }
+
+  .tool_list .tool_list_item span {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .wrapper {
+    padding: 2.5rem;
+    padding-top: 4.5rem;
+  }
 }

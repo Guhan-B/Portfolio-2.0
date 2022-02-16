@@ -3,13 +3,14 @@
   height: calc(100vh + 70px);
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  overflow: hidden;
 }
 
 .wrapper .center_content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 12rem;
+  padding-top: 30vh;
 }
 
 .wrapper .center_content h2 {
@@ -144,7 +145,12 @@
 }
 
 .video_background_overlay {
-  width: 100vw;
+  height: calc(100vh + 70px);
+}
+
+.video_background_overlay video {
+  object-fit: cover;
+  height: calc(100vh + 70px);
 }
 
 @keyframes scroll-down {
@@ -157,4 +163,48 @@
     transform: translateX(-50%) translateY(200%);
     opacity: 0;
   }
+}
+
+@media only screen and (max-width: 850px) {
+  .wrapper .center_content h1 {
+    font-size: 4rem;
+  }
+
+  .wrapper .center_content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .wrapper {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .wrapper {
+    height: 100vh;
+  }
+
+
+  .wrapper .center_content h1 {
+    font-size: 3.25rem;
+  }
+
+  .wrapper .center_content h2 {
+    font-size: 1.25rem;
+  }
+
+  .wrapper .side_email {
+    right: 1.25rem;
+  }
+
+  .wrapper .side_social {
+    left: 1.25rem;
+  }
+
+  .wrapper .side_email .line, .wrapper .side_social .line {
+    height: 100px;
+  }
+
 }

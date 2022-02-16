@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 const App = () => {
   return (
     <React.Fragment>
-      <Cursor />
+      {/* <Cursor /> */}
       <Home />
     </React.Fragment>
   );

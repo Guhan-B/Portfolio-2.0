@@ -56,3 +56,16 @@
     font-family: 'Roboto Mono', monospace;
 }
 
+@media only screen and (max-width: 650px) {
+    .footer {
+        padding: 2.5rem;
+    }
+    .footer .link_version {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    .footer .link_version a {
+        font-size: 0.85rem;
+    }
+}
