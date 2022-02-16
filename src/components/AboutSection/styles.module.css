@@ -62,7 +62,7 @@
 @media only screen and (max-width: 650px) {
   .wrapper .left_section {
     order: 2;
-    padding: 2.5rem;
+    padding: 2.5rem 1.5rem;
     padding-bottom: 3.5rem;
   }
 

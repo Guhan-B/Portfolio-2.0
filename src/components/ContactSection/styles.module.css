@@ -171,7 +171,7 @@
 
 @media only screen and (max-width: 650px) {
     .wrapper {
-        padding: 2.5rem;
+      padding: 2.5rem 1.5rem;
     }
 
     .wrapper .right form .col_2 {

@@ -80,7 +80,7 @@ const ContactSection = () => {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="contact">
       { showAlert && <Alert alert={alertDetails}/> }
       <div className={styles.left}>
         <div>

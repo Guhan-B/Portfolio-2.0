@@ -27,8 +27,9 @@ const Header = () => {
         <div className={menuClasses.join(" ")}>
           <a onClick={toggleMenu} href="#home">Home</a>
           <a onClick={toggleMenu} href="#about">About</a>
-          <a onClick={toggleMenu} href="#showcase">Showcase</a>
-          <a onClick={toggleMenu} href="#resume">Resume</a>
+          <a onClick={toggleMenu} href="#skills">Skills</a>
+          <a onClick={toggleMenu} href="#contact">Contact</a>
+          <a onClick={toggleMenu} target="_blank" href="https://drive.google.com/file/d/1lh67GHMIzbYG_cdSefiCfu9WFBnMbWYy/view?usp=sharing">Resume</a>
         </div>
         <div className={burgerClasses.join(" ")} onClick={toggleMenu}>
           <span></span>

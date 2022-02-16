@@ -101,7 +101,7 @@
 
 @media only screen and (max-width: 650px) {
   .wrapper {
-    padding: 2.5rem;
+    padding: 2.5rem 1.5rem;
     padding-top: 4.5rem;
   }
 }

@@ -29,7 +29,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   text-transform: uppercase;
   position: fixed;
   width: 100vw;
@@ -66,6 +66,9 @@
 .header .header_right .links a:nth-of-type(4) {
   transition-delay: 0.45s;
 }
+.header .header_right .links a:nth-of-type(5) {
+  transition-delay: 0.5s;
+}
 
 .header .header_right .links.active a {
   opacity: 1;
@@ -101,6 +104,10 @@
   background: transparent;
   transition: all 0.2s ease-out;
   cursor: pointer;
+  position: fixed;
+  right: 2rem;
+  top: 1rem;
+  z-index: 10;
 }
 
 .burger span {
@@ -108,7 +115,7 @@
   height: 2px;
   position: absolute;
   top: 50%;
-  background: var(--color-white);
+  background: var(--color-grey-light);
   transition: all 0.2s ease-out;
   will-change: transform;
 }

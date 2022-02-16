@@ -24,7 +24,7 @@ const SkillSection = () => {
 
 const SkillListItem = ({ skill }) => {
   return (
-    <div key={skill.id} className={styles.skill_list_item}>
+    <div key={skill.id} className={styles.skill_list_item} id="skills">
       <p>{skill.name}</p>
       <span className={styles.line}>
         <motion.span 

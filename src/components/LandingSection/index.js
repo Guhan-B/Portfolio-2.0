@@ -20,7 +20,7 @@ const LandingSection = () => {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="home">
       <div className={styles.scroll_indicator}></div>
       <div className={styles.video_background_overlay}>
         <video playsInline autoPlay muted loop>

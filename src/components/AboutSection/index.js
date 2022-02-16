@@ -7,7 +7,7 @@ import Wave from "../../assets/Wave.gif";
 
 const AboutSection = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="about">
       <div className={styles.left_section}>
         <h1>
           <span>Hola People</span>
