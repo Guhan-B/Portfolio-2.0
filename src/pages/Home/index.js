@@ -5,8 +5,8 @@ import LandingSection from "../../components/LandingSection";
 import QuoteSection from "../../components/QuoteSection";
 import AboutSection from "../../components/AboutSection";
 import SkillSection from "../../components/SkillSection";
+import ProjectPlaceholder from "../../components/ProjectPlaceholder";
 import ContactSection from "../../components/ContactSection";
-import AudioPlayer from "../../components/AudioPlayer";
 import Footer from "../../components/Footer";
 
 const Home = () => {
@@ -19,10 +19,7 @@ const Home = () => {
         author="Charles Swindoll"
       />
       <AboutSection />
-      <QuoteSection
-        quote="Do not go where the path may lead, go instead where there is no path and leave a trail."
-        author="Ralph Waldo Emerson"
-      />
+      <ProjectPlaceholder/>
       <SkillSection />
       <ContactSection />
       <Footer/>

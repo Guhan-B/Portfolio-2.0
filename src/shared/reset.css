@@ -7,7 +7,7 @@
   box-sizing: border-box;
   font-family: 'Oswald', sans-serif;
   scroll-behavior: smooth;
-  /* cursor: none; */
+  cursor: none !important;
 }
 
 html::-webkit-scrollbar {
@@ -33,4 +33,9 @@ img {
 a {
   text-decoration: none;
   display: block;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }

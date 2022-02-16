@@ -13,7 +13,7 @@ const AudioPlayer = () => {
     React.useEffect(() => {
         audio.current = new Audio(Music);
         audio.current.loop = true;
-        audio.current.volume = 0.7;
+        audio.current.volume = 0.5;
     }, []);
 
     const play = () => {

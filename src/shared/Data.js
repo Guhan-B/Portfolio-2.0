@@ -115,14 +115,18 @@ export const socials = [
 export const titles = [
   {
     id: 1,
-    text: "Developer",
+    text: "Student",
   },
   {
     id: 2,
-    text: "Designer",
+    text: "Developer",
   },
   {
     id: 3,
+    text: "Designer",
+  },
+  {
+    id: 4,
     text: "Cyclist",
   },
 ];

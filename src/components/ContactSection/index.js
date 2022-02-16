@@ -1,4 +1,5 @@
 import React from "react";
+import EmailJS from "@emailjs/browser";
 
 import styles from "./styles.module.css";
 
@@ -20,7 +21,42 @@ const ContactSection = () => {
   const [showAlert, setShowAlert] = React.useState(false);
   const [alertDetails, setAlertDetails] = React.useState({});
 
-  const validateEmail = value => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/.test(value);
+  const validateEmail = (value) =>
+    /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/.test(value);
+
+  const sendMail = () => {
+    EmailJS.init("user_bEu9GQ8ZuTI9BYeqcWjZf");
+    const templateParams = {
+      from_email: email,
+      to_email: "bkguhan2001@gmail.com",
+      from_name: name,
+      subject: subject,
+      message: message,
+    };
+    EmailJS.send("service_gt9wr2k", "template_pybbibp", templateParams)
+      .then((res) => {
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+        setShowAlert(true);
+        setAlertDetails({
+          message: "Message sent successfully",
+          icon: Success,
+          type: "success",
+        });
+        setTimeout(() => setShowAlert(false), 6000);
+      })
+      .catch((err) => {
+        setShowAlert(true);
+        setAlertDetails({
+          message: "Unable to send message",
+          icon: Error,
+          type: "error",
+        });
+        setTimeout(() => setShowAlert(false), 6000);
+      });
+  };
 
   const submit = (e) => {
     e.preventDefault();
@@ -55,33 +91,22 @@ const ContactSection = () => {
 
     setError(errorCopy);
 
-    if(isError) {
+    if (isError) {
       setShowAlert(true);
       setAlertDetails({
         message: "One or more values is incorrect",
         icon: Error,
-        type: "error"
+        type: "error",
       });
       setTimeout(() => setShowAlert(false), 6000);
-    }
-    else {
-      setName("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
-      setShowAlert(true);
-      setAlertDetails({
-        message: "Message sent successfully",
-        icon: Success,
-        type: "success"
-      });
-      setTimeout(() => setShowAlert(false), 6000);
+    } else {
+      sendMail();
     }
   };
 
   return (
     <div className={styles.wrapper} id="contact">
-      { showAlert && <Alert alert={alertDetails}/> }
+      {showAlert && <Alert alert={alertDetails} />}
       <div className={styles.left}>
         <div>
           <h1>Let's</h1>
@@ -128,7 +153,7 @@ const ContactSection = () => {
           />
           <button className={styles.submit_button}>
             <span>Send Message</span>
-            <img src={Arrow} alt="arrow"/>
+            <img src={Arrow} alt="arrow" />
           </button>
         </form>
       </div>
@@ -170,9 +195,9 @@ const Alert = (props) => {
   return (
     <div className={styles.alert + " " + styles[props.alert.type]}>
       <span>{props.alert.message}</span>
-      <img src={props.alert.icon} alt="error icon"/>
+      <img src={props.alert.icon} alt="error icon" />
     </div>
   );
-}
+};
 
 export default ContactSection;
