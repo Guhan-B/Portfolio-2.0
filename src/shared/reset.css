@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 * {
   margin: 0;
@@ -38,4 +39,8 @@ a {
 
 button {
   cursor: pointer;
+}
+
+p {
+  line-height: 1.7;font-size: 1.07rem;
 }

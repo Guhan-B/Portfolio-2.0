@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./styles.module.css";
 
-import Placeholder from "../../assets/Placeholder.jpg";
+import Placeholder from "../../assets/me.png";
 import Wave from "../../assets/Wave.gif";
 
 const AboutSection = () => {
@@ -14,18 +14,10 @@ const AboutSection = () => {
           <img src={Wave} alt="wave"/>
         </h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec
-          odio enim. Aliquam at pharetra purus. Donec dignissim lectus at turpis
-          pharetra, sit amet maximus enim vulputate. Etiam a nulla risus. Donec
-          et dolor et nibh vestibulum vulputate et nec lacus. Duis ullamcorper
-          est nec risus fermentum, vulputate semper dui blandit.
+          Hello! I am Guhan, a student from MIT, Chennai, a computer science and engineering undergraduate. I create things for the web. My main interests are web/application development, UI designing, machine learning, and deep learning. I started working in web development back in 2019 and have been doing stuff in ML for quite a while. UI designing is more of a hobby than a profession to me, but I love doing it.
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec
-          odio enim. Aliquam at pharetra purus. Donec dignissim lectus at turpis
-          pharetra, sit amet maximus enim vulputate. Etiam a nulla risus. Donec
-          et dolor et nibh vestibulum vulputate et nec lacus. Duis ullamcorper
-          est nec risus fermentum, vulputate semper dui blandit.
+          My main focus these days is to learn more in ML/DL and also in building useful and interesting projects once in a while. I'm also interested in general competitive programming which I often do in LeetCode.
         </p>
       </div>
       <div className={styles.right_section}>
