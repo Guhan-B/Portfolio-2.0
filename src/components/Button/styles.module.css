@@ -1,0 +1,33 @@
+.wrapper {
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    gap: 0.25rem;
+    padding: 0.65rem 2rem;
+    transition: 0.4s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    width: fit-content;
+}
+
+.wrapper {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+.wrapper img {
+    width: 20px;
+    transition: 0.4s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    display: block;
+    margin-top: 1px;
+}
+
+.wrapper:hover {
+    background-color: var(--color-accent);
+}
+
+.wrapper:hover img {
+    transform: translateX(20%);
+}

@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 
 * {
   margin: 0;
@@ -8,7 +9,7 @@
   box-sizing: border-box;
   font-family: 'Oswald', sans-serif;
   scroll-behavior: smooth;
-  cursor: none !important;
+  /* cursor: none !important; */
 }
 
 html::-webkit-scrollbar {
@@ -42,5 +43,6 @@ button {
 }
 
 p {
-  line-height: 1.7;font-size: 1.07rem;
+  line-height: 1.8;
+  font-size: 1rem;
 }

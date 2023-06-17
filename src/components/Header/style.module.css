@@ -1,14 +1,22 @@
 .header {
-  background-color: transparent;
   width: 100%;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 10;
-  transition: 0.2s all ease-in-out;
+  transition: 0.2s all var(--transition-function);
+}
+
+.header.dark {
+  background-color: transparent;
+}
+
+.header.light {
+  background-color: var(--color-white);
+  box-shadow: 0 0 5px 0 rgba(43, 45, 66, 0.2);
 }
 
 .header .header_left .logo {
@@ -36,7 +44,7 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: var(--color-black);
+  background-color: var(--color-primary);
   transition: 0.4s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
   clip-path: circle(0% at 100% 0);
 }
@@ -46,28 +54,12 @@
 }
 
 .header .header_right .links a {
-  font-size: 2rem;
+  font-size: 3rem;
   color: var(--color-white);
   font-weight: 500;
   transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   position: relative;
   opacity: 0;
-}
-
-.header .header_right .links a:nth-of-type(1) {
-  transition-delay: 0.1s;
-}
-.header .header_right .links a:nth-of-type(2) {
-  transition-delay: 0.25s;
-}
-.header .header_right .links a:nth-of-type(3) {
-  transition-delay: 0.3s;
-}
-.header .header_right .links a:nth-of-type(4) {
-  transition-delay: 0.45s;
-}
-.header .header_right .links a:nth-of-type(5) {
-  transition-delay: 0.5s;
 }
 
 .header .header_right .links.active a {
@@ -78,20 +70,8 @@
   transition-delay: 0;
 }
 
-.header .header_right .links a::after{
-  content: "";
-  width: 0%;
-  position: absolute;
-  top: 50%;
-  left: -10%;
-  height: 4px;
-  background-color: var(--color-white);
-  transition: 0.2s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  opacity: 0.8;
-}
-
-.header .header_right .links a:hover::after {
-  width: 120%;
+.header .header_right .links a:hover {
+  color: var(--color-accent);
 }
 
 .burger {
@@ -107,7 +87,6 @@
   right: 2rem;
   top: 1rem;
   z-index: 20;
-  mix-blend-mode: difference;
 }
 
 .burger span {
@@ -116,9 +95,16 @@
   display: block;
   position: absolute;
   top: 50%;
-  background: var(--color-white);
   transition: all 0.2s ease-out;
   will-change: transform;
+}
+
+.burger.light span {
+  background: var(--color-black);
+}
+
+.burger.dark span{
+  background: var(--color-white);
 }
 
 .burger span:nth-of-type(1) {
@@ -135,6 +121,10 @@
 
 .active.burger span:nth-of-type(2) {
   transform: translateY(0px) rotate(-45deg);
+}
+
+.active.burger.light span, .active.burger.dark span {
+  background-color: var(--color-white);
 }
 
 @media only screen and (max-width: 650px) {

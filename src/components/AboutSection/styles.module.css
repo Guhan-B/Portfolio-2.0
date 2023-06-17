@@ -1,77 +1,57 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 500px;
-  background-color: var(--color-black);
-  color: var(--color-white);
-  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+  grid-template-columns: 1fr 1fr;
+  color: var(--color-black);
 }
 
 .wrapper .left_section {
-  padding: var(--spacing-md);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: var(--spacing-md);
 }
 
 .wrapper .left_section h1 {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  line-height: 1;
   margin-bottom: var(--spacing-sm);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--spacing-sm);
 }
 
 .wrapper .left_section p {
-  margin-bottom: 0.75rem;
-  /* width: 70%; */
+  font-size: 1rem;
+  margin-bottom: var(--spacing-xs);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  text-align: justify;
 }
-
 
 .wrapper .left_section p:last-of-type {
   margin-bottom: 0;
 }
 
-.wrapper .left_section h1 img {
-  width: 35px;
+.wrapper .left_section button {
+  margin-top: var(--spacing-sm);
 }
 
-.wrapper .right_section img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  object-position: top;
-}
-
-@media only screen and (max-width: 1100px) {
-  .wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .right_section {
-    height: 100%;
-    background-color: red;
-  }
-
-  .right_section img {
-    height: 100%;
-  }
+.wrapper .right_section {
+  background-image: url("../../assets/me.jpg");
+  background-size: cover;
+  background-position: center top;
 }
 
 @media only screen and (max-width: 850px) { 
   .wrapper {
     grid-template-columns: 1fr;
-    clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
   }
 
-  .wrapper .right_section img {
+  .wrapper .right_section{
     height: 700px;
   }
 
   .wrapper .left_section {
     order: 2;
-    padding-bottom: var(--spacing-lg);
+    padding: var(--spacing-sm);
   }
 
   .wrapper .right_section {
@@ -82,11 +62,11 @@
 @media only screen and (max-width: 650px) {
   .wrapper .left_section {
     order: 2;
-    padding: var(--spacing-sm) 1.5rem;
-    padding-bottom: var(--spacing-md);
+    padding: 1.5rem;
   }
 
-  .wrapper .right_section img {
-    height: 500px;
+  .wrapper .right_section{
+    height: 50vh;
   }
+
 }
