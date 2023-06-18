@@ -3,9 +3,8 @@ import EmailJS from "@emailjs/browser";
 
 import styles from "./styles.module.css";
 
-import Arrow from "../../assets/Arrow.svg";
-import Success from "../../assets/Check.svg";
-import Error from "../../assets/Error.svg";
+import Success from "../../assets/icons/Check.svg";
+import Error from "../../assets/icons/Error.svg";
 import Button from "../Button";
 
 const ContactSection = () => {

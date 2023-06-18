@@ -9,7 +9,7 @@
   box-sizing: border-box;
   font-family: 'Oswald', sans-serif;
   scroll-behavior: smooth;
-  /* cursor: none !important; */
+  cursor: none !important;
 }
 
 html::-webkit-scrollbar {

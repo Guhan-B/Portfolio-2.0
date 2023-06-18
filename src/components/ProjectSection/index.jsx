@@ -1,9 +1,9 @@
 import React from "react";
 
 import styles from "./styles.module.css";
-import PLACEHOLDER from "../../assets/Thumbnail.jpg";
+
 import LINK_ICON from "../../assets/icons/Link.svg"
-import GITHUB_ICON from "../../assets/icons/Github.svg"
+import GITHUB_ICON from "../../assets/icons/Github-Dark.svg"
 
 const ProjectPlaceholder = (props) => {
   return (

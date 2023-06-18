@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./styles.module.css";
 
-import {socials, titles} from "../../shared/Data";
+import { socials } from "../../shared/Data";
 import Button from "../Button";
 
 const LandingSection = () => {

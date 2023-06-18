@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./styles.module.css";
-import Arrow from "../../assets/Arrow.svg";
+import Arrow from "../../assets/icons/Arrow.svg";
 
 const Button = (props) => {
     const themes = {
