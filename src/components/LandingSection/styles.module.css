@@ -1,10 +1,9 @@
 .wrapper {
   height: 100vh;
-  background-color: var(--color-primary);
   position: relative;
   overflow: hidden;
-  padding: 0 var(--spacing-md);
   display: flex;
+  padding: 0 var(--spacing-md);
 }
 
 .wrapper * {
@@ -18,46 +17,30 @@
   flex: 1;
 }
 
-.wrapper .content button {
-  background-color: var(--color-accent);
-}
-
 .wrapper .content h1 {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs);
-  margin-bottom: var(--spacing-sm);
-  line-height: 1;
+  text-transform: uppercase;
   font-size: 4rem;
-  text-transform: uppercase;
-  color: var(--color-white);
-}
-
-.wrapper .content h2 {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  margin-bottom: var(--spacing-xs);
-  font-size: 2.5rem;
-  display: block;
   line-height: 1;
-  text-transform: uppercase;
-  color: var(--color-white);
+  color: var(--color-heading);
 }
 
-.wrapper .content h2 span {
+.wrapper .content h1 span {
   color: var(--color-accent);
+}
+
+.wrapper .content h1:last-of-type {
+  margin-bottom: var(--spacing-sm);
 }
 
 .wrapper .content p {
   font-size: 1rem;
   font-family: "Raleway";
-  color: var(--color-white);
+  color: var(--color-text);
   width: 50%;
   margin-bottom: var(--spacing-md);
   opacity: 0.8;
+  font-weight: 500;
 }
-
 
 .wrapper .social {
   display: flex;
@@ -65,7 +48,7 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
-  gap: 1.5rem;
+  gap: var(--spacing-sm);
 }
 
 .wrapper .social a {

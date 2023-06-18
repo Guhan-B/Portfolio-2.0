@@ -12,8 +12,8 @@
   justify-content: center;
   text-align: left;
   line-height: 1;
-  color: var(--color-primary);
-  background-color: var(--color-gray);
+  color: var(--color-heading);
+  background-color: var(--color-primary-light);
   padding: 4rem;
 }
 
@@ -23,7 +23,6 @@
 
 .wrapper .right {
   padding: 4rem;
-  color: var(--color-black);
 }
 
 .wrapper .right h1 {
@@ -31,6 +30,7 @@
   font-size: 2.5rem;
   line-height: 1;
   margin-bottom: var(--spacing-sm);
+  color: var(--color-heading);
 }
 
 .wrapper .right p {
@@ -38,6 +38,8 @@
   font-weight: 500;
   font-size: 1rem;
   margin-bottom: var(--spacing-xs);
+  opacity: 0.8;
+  color: var(--color-text);
 }
 
 .wrapper .right form {
@@ -64,15 +66,16 @@
 .input_group input,
 .input_group textarea {
   width: 100%;
-  background-color: var(--color-gray);
+  background-color: var(--color-primary-light);
   border: none;
   padding: 1rem;
   outline: none;
-  border-bottom: 3px solid var(--color-gray);
+  border-bottom: 3px solid var(--color-primary-light);
   resize: vertical;
   font-size: 1rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
+  color: var(--color-heading);
 }
 
 .input_group textarea {
@@ -83,7 +86,7 @@
 .input_group textarea ~ span {
   height: 3px;
   width: 0%;
-  background-color: var(--color-primary);
+  background-color: var(--color-text);
   display: block;
   position: absolute;
   bottom: 0;
@@ -93,6 +96,11 @@
 
 .input_group textarea ~ span {
   bottom: 5px;
+}
+
+.input_group input::placeholder,
+.input_group textarea::placeholder {
+  color: var(--color-text);
 }
 
 .input_group input:focus::placeholder,
@@ -112,7 +120,7 @@
 
 
 .alert {
-  color: var(--color-white);
+  color: var(--color-heading);
   position: fixed;
   left: 0px;
   bottom: 20px;
@@ -169,6 +177,6 @@
     }
   
     .wrapper .right {
-      padding: 1.5rem;
+      padding: var(--spacing-sm) 1.5rem;
     }
 }

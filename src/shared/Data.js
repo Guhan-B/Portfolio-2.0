@@ -1,8 +1,8 @@
 import Github from "../assets/icons/Github-Light.svg";
-import Dribbble from "../assets/icons/Dribbble.svg";
-import Instagram from "../assets/icons/Instagram.svg";
-import LinkedIn from "../assets/icons/LinkedIn.svg";
-import Twitter from "../assets/icons/Twitter.svg";
+import Dribbble from "../assets/icons/Dribbble-Light.svg";
+import Instagram from "../assets/icons/Instagram-Light.svg";
+import LinkedIn from "../assets/icons/LinkedIn-Light.svg";
+import Twitter from "../assets/icons/Twitter-Light.svg";
 
 export const socials = [
   {

@@ -13,11 +13,9 @@ import ScrollProgress from "../../components/ScrollProgress";
 const Home = () => {
   return (
     <React.Fragment>
-      <ScrollProgress/>
       <Header />
       <LandingSection />
       <AboutSection />
-      <QuoteSection quote="Life is ten percent what happens to you and ninety percent how you respond to it." author="Charles Swindoll"/>
       <ProjectSection/>
       {/* <SkillSection /> */}
       <ContactSection />

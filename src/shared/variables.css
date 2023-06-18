@@ -1,10 +1,13 @@
 :root {
-    --color-black: #2b2d42;
-    --color-white: #eff1f3;
-    --color-primary: #003049;
-    --color-accent: #d62828;
-    --color-gray: #dee2e6;
     
+    --color-accent: #d62828;
+    
+    /* Dark Theme */
+    --color-primary: #0a192f;
+    --color-primary-light: #112240;
+    --color-text: #8892b0;
+    --color-heading: #dee2e6;
+
     --transition-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
     --primary-font: 'Oswald', sans-serif;

@@ -5,19 +5,12 @@
   justify-content: space-between;
   padding: var(--spacing-xs) var(--spacing-sm);
   position: fixed;
-  top: 5px;
+  top: 0;
   z-index: 10;
   transition: all 0.2s ease-in-out;
-}
-
-.header.scrolled {
-  background-color: var(--color-white);
-  box-shadow: 0 0 5px 0 rgba(43, 45, 66, 0.2);
-}
-
-.header.scrolled.active {
-  background-color: transparent;
-  box-shadow: none;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  /* background-color: rgba(10, 25, 47, 0.5); */
 }
 
 .header .header_left .logo {
@@ -61,15 +54,11 @@
   top: 50%;
   transform: translateY(-50%);
   transition: all 0.2s ease-out;
-  background-color: var(--color-white);
+  background-color: var(--color-heading);
 }
 
-.header.scrolled .header_right .burger span {
-  background-color: var(--color-black);
-}
-
-.header.scrolled.active .header_right .burger span {
-  background-color: var(--color-white);
+.header.active .header_right .burger span {
+  background-color: var(--color-heading);
 }
 
 .header .header_right .burger span:nth-of-type(1) {
@@ -113,7 +102,7 @@
 
 .menu a {
   font-size: 3rem;
-  color: var(--color-white);
+  color: var(--color-heading);
   font-weight: 500;
   transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   position: relative;

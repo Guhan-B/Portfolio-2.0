@@ -1,5 +1,6 @@
 .wrapper {
-  background-color: var(--color-gray);
+  background-color: var(--color-primary);
+  color: var(--color-heading);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,16 +13,15 @@
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--color-black);
   text-align: center;
 }
 
 .wrapper span {
   font-style: italic;
-  color: var(--color-black);
   font-size: 1rem;
   font-family: "Raleway";
-  font-weight: 600;
+  font-weight: 500;
+  opacity: 0.8;
 }
 
 @media only screen and (max-width: 650px) {

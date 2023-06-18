@@ -9,10 +9,8 @@ const LandingSection = () => {
   return (
     <div className={styles.wrapper} id="home">
 
-      <div className={styles.scroll_indicator}></div>
-
       <div className={styles.content}>
-        <h2>Hello, I Am <span>Guhan</span></h2>
+        <h1>Hello, I Am <span>Guhan</span></h1>
         <h1>I Build Software Applictions</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque metus massa, sed congue nibh suscipit lacinia. Duis turpis lacus, pretium id ligula tincidunt, euismod sodales tellus Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <Button label="Check Out My Works"/>

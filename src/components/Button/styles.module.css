@@ -13,8 +13,8 @@
 }
 
 .wrapper {
-    color: var(--color-white);
-    background-color: var(--color-primary);
+    color: var(--color-heading);
+    background-color: var(--color-accent);
 }
 
 .wrapper img {

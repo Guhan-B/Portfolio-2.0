@@ -42,7 +42,7 @@ const Header = () => {
       <div className={headerClasses.join(" ")}>
 
         <div className={styles.header_left}>
-          <img className={styles.logo} src={isScrollReached ? LOGO_DARK : LOGO_LIGHT} alt="Logo" />
+          <img className={styles.logo} src={LOGO_LIGHT} alt="Logo" />
         </div>
 
         <div className={styles.header_right}>

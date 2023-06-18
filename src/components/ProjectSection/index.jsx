@@ -2,8 +2,9 @@ import React from "react";
 
 import styles from "./styles.module.css";
 
-import LINK_ICON from "../../assets/icons/Link.svg"
-import GITHUB_ICON from "../../assets/icons/Github-Dark.svg"
+import LINK_ICON from "../../assets/icons/Link-Light.svg"
+import GITHUB_ICON from "../../assets/icons/Github-Light.svg"
+import BOX_ICON from "../../assets/icons/Box.svg";
 
 const ProjectPlaceholder = (props) => {
   return (
@@ -23,10 +24,10 @@ const ProjectCard = () => {
   return (
     <div className={styles.card}>
       <div className={styles.header}>
-        <h2>#1</h2>
+        <img className={styles.box} src={BOX_ICON}/>
         <span className={styles.links}>
           <a href=""><img src={GITHUB_ICON} alt="Github Link" srcset="" /></a>
-          <a href=""><img src={LINK_ICON} alt="Github Link" srcset="" /></a>
+          <a href=""><img src={LINK_ICON} alt="Project Link" srcset="" /></a>
         </span>
       </div>
       <div className={styles.body}>
