@@ -6,26 +6,31 @@ import LOGO_LIGHT from "../../assets/Logo-Light.svg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [colorClass, setColorClass] = React.useState("dark");
+  const [isScrollReached, setIsScrollReached] = React.useState(false);
+
+  const burgerClasses = [styles.burger];
+  const headerClasses = [styles.header];
+  const menuClasses = [styles.menu];
 
   React.useEffect(() => {
     document.addEventListener("scroll", () => {
       if(window.scrollY > window.innerHeight / 2) {
-        setColorClass("light");
+        setIsScrollReached(true);
       }
       else {
-        setColorClass("dark");
+        setIsScrollReached(false);
       }
     });
   }, []);
 
-  const burgerClasses = [styles.burger, styles[colorClass]];
-  const headerClasses = [styles.header, styles[colorClass]];
-  const menuClasses = [styles.links];
-
   if (isOpen) {
     burgerClasses.push(styles.active);
     menuClasses.push(styles.active);
+    headerClasses.push(styles.active)
+  }
+
+  if (isScrollReached) {
+    headerClasses.push(styles.scrolled);
   }
 
   const toggleMenu = () => {
@@ -34,40 +39,46 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <div className={burgerClasses.join(" ")} onClick={toggleMenu}>
-        <span></span>
-        <span></span>
-      </div>
       <div className={headerClasses.join(" ")}>
+
         <div className={styles.header_left}>
-          <img className={styles.logo} src={colorClass === "dark" ? LOGO_LIGHT : LOGO_DARK} alt="Logo" />
+          <img className={styles.logo} src={isScrollReached ? LOGO_DARK : LOGO_LIGHT} alt="Logo" />
         </div>
+
         <div className={styles.header_right}>
-          <div className={menuClasses.join(" ")}>
-            <a onClick={toggleMenu} href="#home">
-              Home
-            </a>
-            <a onClick={toggleMenu} href="#about">
-              About
-            </a>
-            <a onClick={toggleMenu} href="#skills">
-              Skills
-            </a>
-            <a onClick={toggleMenu} href="#contact">
-              Contact
-            </a>
-            <a
-              onClick={toggleMenu}
-              target="_blank"
-              href="https://drive.google.com/file/d/1lh67GHMIzbYG_cdSefiCfu9WFBnMbWYy/view?usp=sharing"
-            >
-              Resume
-            </a>
+          <div className={burgerClasses.join(" ")} onClick={toggleMenu}>
+            <span></span>
+            <span></span>
           </div>
         </div>
+
+      </div>
+
+      <div className={menuClasses.join(" ")}>
+        <a onClick={toggleMenu} href="#home">
+          Home
+        </a>
+        <a onClick={toggleMenu} href="#about">
+          About
+        </a>
+        <a onClick={toggleMenu} href="#skills">
+          Skills
+        </a>
+        <a onClick={toggleMenu} href="#contact">
+          Contact
+        </a>
+        <a
+          onClick={toggleMenu}
+          target="_blank"
+          href="https://drive.google.com/file/d/1lh67GHMIzbYG_cdSefiCfu9WFBnMbWYy/view?usp=sharing"
+        >
+          Resume
+        </a>
       </div>
     </React.Fragment>
   );
 };
+
+{/*  */ }
 
 export default Header;

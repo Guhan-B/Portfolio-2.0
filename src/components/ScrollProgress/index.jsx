@@ -1,10 +1,10 @@
 import React from "react";
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import { motion, useTransform, useScroll } from "framer-motion";
 
 import styles from "./styles.module.css";
 
 const ScrollProgress = () => {
-  const { scrollYProgress } = useViewportScroll();
+  const { scrollYProgress } = useScroll();
   const input = [0, 1];
   const output = [0, window.innerWidth];
   const width = useTransform(scrollYProgress, input, output);

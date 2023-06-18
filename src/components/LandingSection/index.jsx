@@ -1,24 +1,24 @@
 import React from "react";
+import Button from "../Button";
 
 import styles from "./styles.module.css";
-
 import { socials } from "../../shared/Data";
-import Button from "../Button";
+import WAVE_HAND from "../../assets/Waving Hand.png";
 
 const LandingSection = () => {
   return (
     <div className={styles.wrapper} id="home">
+
       <div className={styles.scroll_indicator}></div>
-      <div className={styles.center_content}>
-        <h2>Hello, I'm Guhan</h2>
-        <h1>
-          <span>Designer</span>
-          <span>&</span>
-          <span>Developer</span>
-        </h1>
+
+      <div className={styles.content}>
+        <h2>Hello, I Am <span>Guhan</span></h2>
+        <h1>I Build Software Applictions</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque metus massa, sed congue nibh suscipit lacinia. Duis turpis lacus, pretium id ligula tincidunt, euismod sodales tellus Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <Button label="Check Out My Works"/>
       </div>
-      <div className={styles.side_social}>
+
+      <div className={styles.social}>
         {
           socials.map(
             social => 
@@ -27,12 +27,8 @@ const LandingSection = () => {
             </a>
           )
         }
-        <span className={styles.line}></span>
       </div>
-      <div className={styles.side_email}>
-        <a href="mailto:bkguhan2001@gmail.com">bkguhan2001@gmail.com</a>
-        <span className={styles.line}></span>
-      </div>
+
       <div className={styles.video_background_overlay}>
         <video playsInline autoPlay muted loop>
           <source
@@ -41,6 +37,7 @@ const LandingSection = () => {
           ></source>
         </video>
       </div>
+
     </div>
   );
 };
