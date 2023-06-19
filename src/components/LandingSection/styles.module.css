@@ -21,7 +21,7 @@
   text-transform: uppercase;
   font-size: 4rem;
   line-height: 1;
-  color: var(--color-heading);
+  color: var(--color-light);
 }
 
 .wrapper .content h1 span {
@@ -34,8 +34,8 @@
 
 .wrapper .content p {
   font-size: 1rem;
-  font-family: "Raleway";
-  color: var(--color-text);
+  font-family: var(--font-secondary);
+  color: var(--color-dim-light);
   width: 50%;
   margin-bottom: var(--spacing-md);
   opacity: 0.8;
@@ -59,7 +59,6 @@
 
 .wrapper .social a:hover {
   opacity: 1;
-
 }
 
 .wrapper .social a img {
@@ -70,38 +69,6 @@
 
 .wrapper .social a:hover img {
   transform: scale(1.2);
-}
-
-.wrapper .social .line {
-  display: block;
-  width: 1px;
-  height: 200px;
-  opacity: 0.7;
-  background-color: var(--color-white);
-  margin-top: 1.5rem;
-}
-
-.scroll_indicator {
-  width: 21px;
-  height: 35px;
-  border: 2px solid var(--color-white);
-  border-radius: 35px;
-  position: absolute;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.7;
-}
-
-.scroll_indicator::after {
-  content: "";
-  width: 8px;
-  height: 8px;
-  background-color: var(--color-white);
-  position: absolute;
-  left: 50%;
-  border-radius: 100%;
-  animation: scroll-down 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
 }
 
 .video_background_overlay {

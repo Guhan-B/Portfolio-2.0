@@ -17,7 +17,7 @@ html::-webkit-scrollbar {
 }
 
 body {
-  background-color: var(--color-primary);
+  background-color: var(--color-dark);
 }
 
 ul {

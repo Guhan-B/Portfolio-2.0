@@ -1,17 +1,16 @@
 :root {
-    
-    --color-accent: #d62828;
-    
-    /* Dark Theme */
-    --color-primary: #0a192f;
-    --color-primary-light: #112240;
-    --color-text: #8892b0;
-    --color-heading: #dee2e6;
+    --color-accent: #EF6C35;
+    --color-dark: #222831;
+    --color-light: #F6F6F6;
+    --color-dim-dark: #606470;
+    --color-dim-light: #EEEEEE;
+
+    --color-card-background: #1f2228;
 
     --transition-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
-    --primary-font: 'Oswald', sans-serif;
-    --secondary-font: 'Raleway', sans-serif;
+    --font-primary: 'Oswald', sans-serif;
+    --font-secondary: 'Raleway', sans-serif;
     
     --spacing-xl: 8rem;
     --spacing-lg: 6rem;

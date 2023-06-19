@@ -1,6 +1,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-color: var(--color-light);
 }
 
 .wrapper .left_section {
@@ -15,7 +16,7 @@
   font-size: 2.5rem;
   line-height: 1;
   margin-bottom: var(--spacing-sm);
-  color: var(--color-heading);
+  color: var(--color-dark);
 }
 
 .wrapper .left_section p {
@@ -23,7 +24,7 @@
   margin-bottom: var(--spacing-xs);
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
-  color: var(--color-text);
+  color: var(--color-dim-dark);
 }
 
 .wrapper .left_section p:last-of-type {
